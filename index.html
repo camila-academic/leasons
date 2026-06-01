@@ -4,94 +4,254 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
-
+    
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./slides.css">
+    <link rel="stylesheet" href="./content.css">
 </head>
 <body>
 
-    <div class="slide introduction">
+    <div class="menu">
+        <button onclick="toggleLang()">lang</button>
+        <button onclick="toggleNarr()">narr</button>
+    </div>
+
+    <div class="block introduction">
         <div class="header">
-            <h1>Monitoria de JavaScript</h1>
-            <div class="sub">
-                <h2>Leonardo Pimentel Santos de Araujo - UNIJORGE</h2>
-                <p><span>github: </span><a target="_blank" href="https://www.github.com/lumi2021">lumi2021</a></p>
+            <div locale="pt">
+                <h2>Um tour pelo</h2>
+                <h1>JavaScript</h1>
+            </div>
+            <div locale="en">
+                <h2>A</h2>
+                <div> <h1>JavaScript</h1> <h2>tour</h2> </div>
             </div>
         </div>
+
         <div class="images">
             <img src="static/js_logo.png">
             <img src="static/silly_boi.png">
         </div>
+
+        <div class="signature">
+            <p locale="pt"><span>Por </span><a target="_blank" href="https://www.github.com/lumi2021">lumi2021</a></p>
+            <p locale="en"><span>By </span><a target="_blank" href="https://www.github.com/lumi2021">lumi2021</a></p>
+        </div>
+
     </div>
     
-    <div class="slide sources">
-        <h1>Fontes</h1>
+    <div class="block sources">
+        <h1 locale="pt">Fontes</h1>
+        <h1 locale="en">Sources</h1>
 
         <div>
+            <a target="_blank" id="embed_wikipedia_br_world_wide_web" href="https://pt.wikipedia.org/wiki/World_Wide_Web"></a>
             <a target="_blank" id="embed_wikipedia_br_js" href="https://pt.wikipedia.org/wiki/JavaScript"></a>
             <a target="_blank" id="embed_wikipedia_en_js" href="https://en.wikipedia.org/wiki/JavaScript"></a>
             <a target="_blank" id="embed_mozila_br_js" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"></a>
             <a target="_blank" id="embed_wikipedia_pt_brendan_eich" href="https://pt.wikipedia.org/wiki/Brendan_Eich"></a>
+            <a target="_blank" id="embed_wikipedia_en_browser_wars" href="https://en.wikipedia.org/wiki/Browser_wars"></a>
         </div>
     </div>
 
-    <div class="slide history history_0">
+    <div class="block history history_0">
         <div class="header">
-            <h1>História</h1>
-            <h2>anos 90: web 1.0</h2>
+            <h1 locale="pt">História</h1>
+            <h1 locale="en">History</h1>
         </div>
 
-        <div class="images">
-            <div>
-                <img src="static/web1_img_0.png">
-                <img src="static/web1_img_1.png">
+        <div class="content">
+            <div narrator="on" locale="pt">
+                <p>O nascimento da internet. Uma época deslumbrante para se estar vivo.</p>
+                <p>
+                    A World Wide Web foi formalizada em 1990 por Tim Berners-Lee enquanto
+                    trabalhava no CERN (Organização Europeia para a Investigação Nuclear).
+                </p>
             </div>
+            <div narrator="on" locale="en">
+                <p>The birth of the Internet. A remarkable time to be alive.</p>
+                <p>
+                    The World Wide Web was formalized in 1990 by Tim Berners-Lee while
+                    working at CERN (the European Organization for Nuclear Research).
+                </p>
+            </div>
+
             <div>
-                <img src="static/web1_img_2.png">
-                <img src="static/web1_img_3.png">
-                <img src="static/web1_img_4.png">
+                <img src="https://www.i-programmer.info/images/stories/ComputerCreators/Web/linebrowse.JPG">
             </div>
         </div>
+
+        <div narrator="on" locale="pt" class="aditional">
+            <p>
+                Nos primeiros anos, a Web era utilizada principalmente por universidades
+                e centros de pesquisa para compartilhar documentos e resultados científicos.
+                Devido às limitações tecnológicas da época, as páginas eram simples e
+                compostas quase exclusivamente por texto.
+            </p>
             
+        </div>
+        <div narrator="on" locale="en" class="aditional">
+            <p>
+                During its early years, the Web was used primarily by universities
+                and research centers to share documents and scientific findings.
+                Due to the technological limitations of the time, web pages were
+                simple and composed almost entirely of plain text.
+            </p>
+        </div>
+
+        <div class="first-page font-cause">
+            <div locale="pt">
+                <p>A primeira página da Web ainda pode ser encontrada em:</p>
+                <a href="https://info.cern.ch/hypertext/WWW/TheProject.html">info.cern.ch/hypertext/WWW/TheProject.html</a>
+            </div>
+            <div locale="en">
+                <p>The first web page can still be found at:</p>
+                <a href="https://info.cern.ch/hypertext/WWW/TheProject.html">info.cern.ch/hypertext/WWW/TheProject.html</a>
+            </div>
+        </div>
+
     </div>
 
-    <div class="slide history history_1">
-        <div class="header">
-            <h1>História</h1>
-        </div>
-        <div class="images">
-            <img src="static/ncsa_mosaic_0.png">
+    <div class="block history history_1">
+        <div class="content-block">
+            <div narrator="on">
+                <p locale="pt">
+                    Em 1993, a World Wide Web foi disponibilizada gratuitamente ao público.
+                    Pessoas no mundo inteiro, com infraestrutura suficiente,
+                    puderam então construir seus próprios domínios dentro da rede.
+                </p>
+                <p locale="en">
+                    In 1993, the World Wide Web became freely available to everyone.
+                    People around the world with sufficient infrastructure could then
+                    create their own domains on the network.
+                </p>
+            </div>
+
             <img src="static/ncsa_mosaic_1.png">
         </div>
+
+        <div class="content-block">
+            <div narrator="on">
+                <p locale="pt">
+                    Um dos maiores marcos da internet, no mesmo ano, foi a criação
+                    do NCSA Mosaic, na Universidade de Illinois, EUA.
+                    Como primeiro navegador amplamente adotado, o programa permitia
+                    que imagens pudessem ser incluídas como parte do conteúdo das
+                    páginas web.
+                </p>
+                <p locale="en">
+                    One of the Internet's greatest milestones that same year was the
+                    creation of NCSA Mosaic at the University of Illinois, US.
+                    As the first widely adopted graphical web browser, it allowed images
+                    to be displayed as part of web page content.
+                </p>
+            </div>
+
+            <img src="static/ncsa_mosaic_0.png">
+        </div>
     </div>
 
-    <div class="slide history history_2">
+    <div class="block history history_2">
+        <div class="header" >
+            <h1 locale="pt">Anos 90: Web 1.0</h1>
+            <h1 locale="en">The 90s: Web 1.0</h1>
+        </div>
+
+        <div class="images">
+            <img src="static/web1_img_0.png">
+
+            <div narrator="on">
+                <p locale="pt">
+                    A internet era limitada. Ainda assim, os criadores de conteúdo
+                    dedicavam todo o seu esforço e exploravam ao máximo as ferramentas
+                    disponíveis na época para dar vida às suas páginas web.
+                </p>
+
+                <p locale="en">
+                    The internet was limited. Even so, content creators devoted all
+                    their effort and made the most of the tools available at the time
+                    to bring their web pages to life.
+                </p>
+            </div>
+
+            <img src="static/web1_img_1.png">
+            <img src="static/web1_img_2.png">
+
+            <div narrator="on">
+                <p locale="pt">
+                    A interação era bastante limitada. A maioria das páginas seguia
+                    uma filosofia de "somente leitura", com pouco ou nenhum conteúdo
+                    gerado pelos usuários.
+                </p>
+
+                <p locale="en">
+                    Interaction was very limited. Most websites followed a
+                    "read-only" philosophy, with little or no user-generated content.
+                </p>
+            </div>
+
+            <img src="static/web1_img_3.png">
+            <img src="static/web1_img_4.png">
+        </div>
+        
+        
+    </div>
+
+    <div class="block history history_3">
         <div class="header">
-            <h1>História</h1>
+            
+            <div narrator="on">
+                <p>
+                    O mercado de navegadores, ainda assim, não era um monopólio.
+                    Em 1994, Marc Andreessen, junto a outros funcionários, saem da NCSA
+                    e fundam sua própria companhia. <br/><br/>
+                    Tal companhia veio a ser conhecida como
+                </p>
+            </div>
+
+            <img src="static/netscape_logo.png">
+
+
+            <div narrator="on">
+                <p>
+                    Eles então desenvolveram o Mosaic Netscape... <br/>
+                    que então foi renomeado para Netscape Browser devido a
+                    problemas legais.
+                </p>
+            </div>
+
+            <img src="static/netscape_browser.png">
+
+            <div narrator="on">
+                <p locale="pt">
+                    "Há duas épocas na história da Internet - antes do Mosaic e depois do Mosaic.
+                    A união dos protocolos da Web de Tim Berners-Lee, responsáveis pela conectividade,
+                    com o navegador de Marc Andreessen, que trouxe uma interface acessível e atraente,
+                    teve um impacto explosivo. Em apenas vinte e quatro meses, a Web deixou de ser uma
+                    tecnologia desconhecida para se tornar um fenômeno presente em toda parte."<br/>
+                    — Mark Pesce, ZDNet (traduzido)
+                </p>
+                <p locale="en">
+                    "There are two ages of the Internet — before Mosaic, and after.
+                    The combination of Tim Berners-Lee's Web protocols, which
+                    provided connectivity, and Marc Andreesen's browser, which
+                    provided a great interface, proved explosive. In twenty-four
+                    months, the Web has gone from being unknown to absolutely
+                    ubiquitous."<br/>
+                    — Mark Pesce, ZDNet
+                </p>
+            </div>
 
             <div class="images">
-                <div class="left">
-                    <img src="static/netscape_logo.png">
-                    <div class="step" data-show-step="1">
-                        <img src="static/firefox_logo_0.png">
-                        <img src="static/arrow.svg">
-                    </div>
-                </div>
-                <img src="static/netscape_browser.png">
+                
             </div>
         </div>
     </div>
 
-    <div class="slide history history_3">
-        <div class="header">
-            <h1>História</h1>
-        </div>
-        <div class="images">
-            <img src="static/netscape_browser.png">
-        </div>
+    <div class="block history history_4">
+        
     </div>
 
-    <div class="slide history history_4">
+    <div class="block history history_5">
         <div class="header">
             <h1>História</h1>
             <h2>Brendan Eich</h2>
@@ -104,7 +264,7 @@
         </div>
     </div>
     
-    <div class="slide history history_5">
+    <div class="block history history_6">
         <div class="header">
             <h1>História</h1>
             <h2>Brendan Eich</h2>
@@ -137,7 +297,7 @@
         </div>
     </div>
 
-    <div class="slide history history_6">
+    <div class="block history history_7">
         <div class="header">
             <h1>História</h1>
         </div>
@@ -161,7 +321,7 @@
 
     </div>
 
-    <div class="slide history history_7">
+    <div class="block history history_8">
         <div class="header">
             <h1>História</h1>
         </div>
@@ -172,9 +332,9 @@
         </div>
     </div>
 
-    <div class="slide blank"></div>
+    <div class="block blank"></div>
 
-    <div class="slide the-lang">
+    <div class="block the-lang">
         <div class="left">
             <div class="header"><h1>A Linguagem</h1></div>
             <div class="a">
@@ -221,7 +381,7 @@ console.log(fluffy.hasOwnProperty('name'));
         </div>
     </div>
 
-    <div class="slide the-tools">
+    <div class="block the-tools">
         <div class="left">
             <div class="code"><pre><code class="language-js">
 const alunos = [
@@ -276,14 +436,14 @@ alunos.forEach(aluno => {
         </div>
     </div>
 
-    <div class="slide capabilities capabilities_0">
+    <div class="block capabilities capabilities_0">
         <div class="content">
             <input type="text" oninput="document.getElementById('digite-alguma-coisa').innerHTML = 'o texto tem ' + this.value.length + ' caracteres'">
             <h2 id="digite-alguma-coisa">Digite alguma coisa!</h1>
         </div>
     </div>
 
-    <div class="slide capabilities capabilities_1">
+    <div class="block capabilities capabilities_1">
         <div class="left">
             <button onclick="{
                 document.getElementById('light-bulb-0').getAttribute('src') == 'static/bulb_off.svg'
@@ -310,7 +470,7 @@ alunos.forEach(aluno => {
         </div>
     </div>
 
-    <div class="slide capabilities capabilities_2">
+    <div class="block capabilities capabilities_2">
         <div class="content">
             <img id="silly-boi" src="static/silly_boi_2.jpg" style="opacity: 0;">
 
