@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Cause:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --narrator-font-size: 2em;
-    --text-font-size: 1em;
-    --button-font-size: 1.5em;
-    --input-font-size: 2em;
-    --header1-font-size: 6em;
-    --header2-font-size: 3em;
+    --narrator-font-size: 2rem;
+    --text-font-size: 2rem;
+    --button-font-size: 1.5rem;
+    --input-font-size: 2rem;
+    --header1-font-size: 6rem;
+    --header2-font-size: 3rem;
 }
 
 @media (max-width: 650px) {
     :root {
-        --narrator-font-size: 1.5em;
-        --text-font-size: 1.5em;
-        --header1-font-size: 3em;
-        --header2-font-size: 2.5em;
+        --narrator-font-size: 1.5rem;
+        --text-font-size: 1.5rem;
+        --header1-font-size: 3rem;
+        --header2-font-size: 2.5rem;
     }
 }
 
@@ -55,10 +55,10 @@ p, a, text, button
 
 h1 { font-size: var(--header1-font-size); font-weight: bold; }
 h2 { font-size: var(--header2-font-size); font-weight: bold; }
-p, text { font-size: var(--text-font-size); }
+p, text, a { font-size: var(--text-font-size); }
 
 button {
-    border: 1px solid gray;
+    border: 2px solid gray;
     border-radius: 10px;
     margin: 10px;
     padding: .2em .5em .2em .5em;
@@ -68,7 +68,7 @@ button {
 }
 
 input {
-    border: 5px solid gray;
+    border: 2px solid gray;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
@@ -172,7 +172,10 @@ a:has(> .card) {
     font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 2em;
+    font-size: 1.5rem;
+
+    width: calc(1--% - 10px - 32px);
+    overflow: auto;
 
     & > pre {
         margin: 0;

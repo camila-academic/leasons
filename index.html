@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <div class="menu">
+    <div class="menu" style="display: none;">
         <button onclick="toggleLang()">lang</button>
         <button onclick="toggleNarr()">narr</button>
     </div>
@@ -247,57 +247,158 @@
         </div>
     </div>
 
-    <div class="block history history_4">
-        
+    <div class="block history history_4" narrator="on">
+        <p locale="pt">
+            A web crescia, mas ainda havia muito a ser feito. A falta de comunicação
+            entre os sites, seus criadores e seus usuários era evidente.
+        </p>
+        <p locale="en">
+            The web was growing, but there was still a long way to go. The lack of
+            communication between websites, their creators, and their users was
+            evident.
+        </p>
+
+        <p locale="pt">
+            A Netscape percebeu isso cedo e sabia que era apenas uma questão de tempo
+            até que seus concorrentes encontrassem soluções. A web precisava inovar.
+        </p>
+        <p locale="en">
+            Netscape realized this early and knew it was only a matter of time before
+            competitors found solutions of their own. The web needed innovation.
+        </p>
+
+        <p locale="pt">
+            A empresa então passou a trabalhar em uma forma de tornar a comunicação
+            dentro da World Wide Web bidirecional, ao mesmo tempo em que as páginas
+            pudessem reagir de maneira lógica às ações dos usuários.
+        </p>
+        <p locale="en">
+            The company then began working on a way to make communication within the
+            World Wide Web bidirectional, while also allowing web pages to respond
+            logically to users' actions.
+        </p>
+
+        <p locale="pt">
+            Eles começaram a planejar uma linguagem feita para a web.
+        </p>
+
+        <p locale="en">
+            They began planning a language designed specifically for the web.
+        </p>
     </div>
 
     <div class="block history history_5">
-        <div class="header">
-            <h1>História</h1>
-            <h2>Brendan Eich</h2>
+        <h2>Brendan Eich</h2>
+
+        <img src="static/brendan_eich.jpg">
+
+        <div class="row" narrator="on">
+            <img src="static/firefox_logo_1.png">
+
+            <div narrator="on">
+                <p locale="pt">
+                    Brendam Eich é o maior contribuidor para toda essa história.
+                    Ele é conhecido nos dias modernos por ter concorrido à
+                    vaga de CEO da Mozilla.
+                </p>
+                <p locale="en"></p>
+            </div>
         </div>
 
-        <div class="images">
-            <img src="static/firefox_logo_1.png" data-show-step="1">
-            <img src="static/brendan_eich.jpg">
-            <img src="static/brave_logo.png" data-show-step="2">
+        <div class="row" narrator="on">
+            <img src="static/brave_logo.png">
+
+            <div narrator="on">
+                <p>
+                    Após ser negado a posição devido a polêmicas relacionadas a homofobia,
+                    Eich saiu da Mozila e criou sua própria companhia, essa que veio a ser
+                    nomeada Brave.
+                </p>
+                <p locale="en"></p>
+            </div>
         </div>
+        
     </div>
     
     <div class="block history history_6">
-        <div class="header">
-            <h1>História</h1>
-            <h2>Brendan Eich</h2>
+        
+        <div class="left">
+            <img src="static/brendan_eich.jpg">
         </div>
 
-        <div class="content">
-            <div class="left"> <img src="static/brendan_eich.jpg"> </div>
+        <div class="right">
+            <div narrator="on">
+                <p locale="pt">
+                    Ainda em 1995, Einch foi contratado pela Netscape com o objetivo de
+                    implementar a linguagem <a href="https://www.scala-lang.org/">Scala</a>
+                    dentro da web. A companhia então mudou de ideia e delegou a Eich o dever
+                    de desenvolver uma linguagem completamente nova para o navegador.
+                </p>
+                <p locale="en">
 
-            <div class="right">
-                <div class="netscape-logo" data-hide-step="1">
-                    <img src="static/netscape_logo.png">
-                </div>
-
-                <div class="item" data-show-step="1">
-                    <h2>Mocha</h2>
-                    <img src="static/mocha_redmark.svg" data-show-step="2">
-                </div>
-
-                <div class="item" data-show-step="2">
-                    <h2>LiveScript</h2>
-                    <img src="static/livescript_redmark.svg" data-show-step="3">
-                </div>
-
-                <div class="item" data-show-step="3">
-                    <h2>JavaScript</h2>
-                    <p>(Que não tem nada a ver com Java :) )</p>
-                </div>
+                </p>
+            </div>
+            
+            <div narrator="on">
+                <p locale="pt">
+                    Eich então, dentro de um período de 10 dias, desenvolveu e implementou
+                    no navegador do netscape o protótipouma linguagem de programação chamada
+                </p>
+                <p locale="en">
+                    
+                </p>
             </div>
 
+            <div class="spacer" narrator="off"></div>
+            
+            <div class="item">
+                <h2>Mocha</h2>
+                <img src="static/mocha_redmark.svg" style="display: none;">
+            </div>
+            
+            <div narrator="on">
+                <p locale="pt">
+                    Que depois foi renomeada para
+                </p>
+                <p locale="en">
+                    
+                </p>
+            </div>
+
+            <div class="item">
+                <h2>LiveScript</h2>
+                <img src="static/livescript_redmark.svg" style="display: none;">
+            </div>
+            
+            <div narrator="on">
+                <p locale="pt">
+                    E mais uma vez, como forma de jogada de marketing devido à popular
+                    linguagem de programação Java, para
+                </p>
+                <p locale="en">
+                    
+                </p>
+            </div>
+
+            <div class="item" data-show-step="3">
+                <h2>JavaScript</h2>
+            </div>
+
+            <div class="spacer" narrator="off"></div>
+
+            <div narrator="on">
+                <p locale="pt">
+                    O protótipo original nunca foi refinado, apenas incrementado. este
+                    é ainda a linguagem que conhecemos hoje.
+                </p>
+                <p locale="en">
+                    
+                </p>
+            </div>
         </div>
     </div>
 
-    <div class="block history history_7">
+    <div class="block history history_7" style="display: none;">
         <div class="header">
             <h1>História</h1>
         </div>
@@ -321,7 +422,7 @@
 
     </div>
 
-    <div class="block history history_8">
+    <div class="block history history_8" style="display: none;">
         <div class="header">
             <h1>História</h1>
         </div>
@@ -340,7 +441,6 @@
             <div class="a">
                 <p>- Leve</p>
                 <p>- Simples</p>
-                <p>- Interpretada</p>
                 <p>- Fracamente tipada</p>
                 <p>- Tolerante à falhas</p>
             </div>
@@ -400,7 +500,7 @@ function calcularMedia(notas) {
 alunos.forEach(aluno => {
     const media = calcularMedia(aluno.notas);
 
-    console.log(`\nAluno: ${aluno.nome}`);
+    console.log(`Aluno: ${aluno.nome}`);
     console.log(`Média: ${media.toFixed(2)}`);
 
     if (media >= 7) console.log("Status: Aprovado");
@@ -437,6 +537,11 @@ alunos.forEach(aluno => {
     </div>
 
     <div class="block capabilities capabilities_0">
+        <div narrator="on">
+            <p locale="pt">JavaScript é capaz de ler valores de elementos</p>
+            <p locale="en">JavaScript is capeable of read values of elements</p>
+        </div>
+
         <div class="content">
             <input type="text" oninput="document.getElementById('digite-alguma-coisa').innerHTML = 'o texto tem ' + this.value.length + ' caracteres'">
             <h2 id="digite-alguma-coisa">Digite alguma coisa!</h1>
@@ -444,33 +549,45 @@ alunos.forEach(aluno => {
     </div>
 
     <div class="block capabilities capabilities_1">
-        <div class="left">
-            <button onclick="{
-                document.getElementById('light-bulb-0').getAttribute('src') == 'static/bulb_off.svg'
-                    ? document.getElementById('light-bulb-0').setAttribute('src', 'static/bulb_on.svg')
-                    : document.getElementById('light-bulb-0').setAttribute('src', 'static/bulb_off.svg');
-            }">Switch 1</button>
-
-            <button onclick="{
-                document.getElementById('light-bulb-1').getAttribute('src') == 'static/bulb_off.svg'
-                    ? document.getElementById('light-bulb-1').setAttribute('src', 'static/bulb_on.svg')
-                    : document.getElementById('light-bulb-1').setAttribute('src', 'static/bulb_off.svg');
-            }">Switch 2</button>
-
-            <button onclick="{
-                document.getElementById('light-bulb-2').getAttribute('src') == 'static/bulb_off.svg'
-                    ? document.getElementById('light-bulb-2').setAttribute('src', 'static/bulb_on.svg')
-                    : document.getElementById('light-bulb-2').setAttribute('src', 'static/bulb_off.svg');
-            }">Switch 3</button>
+        <div narrator="on">
+            <p locale="pt">Javascript é capaz de definir atributos</p>
+            <p locale="en">Javascript is capeable of set attributes</p>
         </div>
-        <div class="right">
-            <img  id="light-bulb-0" src="static/bulb_off.svg">
-            <img  id="light-bulb-1" src="static/bulb_off.svg">
-            <img  id="light-bulb-2" src="static/bulb_off.svg">
+        
+        <div class="content">
+            <div class="left">
+                <button onclick="{
+                    document.getElementById('light-bulb-0').getAttribute('src') == 'static/bulb_off.svg'
+                        ? document.getElementById('light-bulb-0').setAttribute('src', 'static/bulb_on.svg')
+                        : document.getElementById('light-bulb-0').setAttribute('src', 'static/bulb_off.svg');
+                }">Switch 1</button>
+
+                <button onclick="{
+                    document.getElementById('light-bulb-1').getAttribute('src') == 'static/bulb_off.svg'
+                        ? document.getElementById('light-bulb-1').setAttribute('src', 'static/bulb_on.svg')
+                        : document.getElementById('light-bulb-1').setAttribute('src', 'static/bulb_off.svg');
+                }">Switch 2</button>
+
+                <button onclick="{
+                    document.getElementById('light-bulb-2').getAttribute('src') == 'static/bulb_off.svg'
+                        ? document.getElementById('light-bulb-2').setAttribute('src', 'static/bulb_on.svg')
+                        : document.getElementById('light-bulb-2').setAttribute('src', 'static/bulb_off.svg');
+                }">Switch 3</button>
+            </div>
+            <div class="right">
+                <img  id="light-bulb-0" src="static/bulb_off.svg">
+                <img  id="light-bulb-1" src="static/bulb_off.svg">
+                <img  id="light-bulb-2" src="static/bulb_off.svg">
+            </div>
         </div>
     </div>
 
     <div class="block capabilities capabilities_2">
+        <div narrator="on">
+            <p locale="pt">Javascript é capaz de definir estilos e modificar aparência de elementos</p>
+            <p locale="en">Javascript is capeable of set styles and modify the aparence of the elements</p>
+        </div>
+        
         <div class="content">
             <img id="silly-boi" src="static/silly_boi_2.jpg" style="opacity: 0;">
 
@@ -488,6 +605,55 @@ alunos.forEach(aluno => {
         </div>
     </div>
     
+    <div class="block features func-first-class" style="display: none;">
+        <div class="top">
+            <div narrator="on">
+                <p locale="pt">Quando uma linguagem trata funções como first-class citizens, significa que funções podem:</p>
+                <div>
+                    <p locale="pt">- Ser armazenadas em variáveis</p>
+                    <p locale="pt">- Ser passadas como argumentos</p>
+                    <p locale="pt">- Ser retornadas por outras funções</p>
+                    <p locale="pt">- Ser armazenadas em objetos e arrays</p>
+                </div>
+                
+                <p locale="pt">Ou seja, funções são valores como qualquer outro.</p>
+            </div>
+        </div>
+        <div class="botton">
+            <div class="left">
+                <div class="code"><pre><code class="language-js">
+const saudar = function(name) {
+    return `Hello, ${name}`;
+};
+
+console.log(saudar("Jhon Doe"));
+
+function executar(callback) {
+    callback();
+}
+
+executar(() => {
+    console.log("Executing callback");
+});
+
+
+                </code></pre></div>
+            </div>
+            <div class="right">
+                <div class="code"><pre><code class="language-js">
+function multiplierFactory(factor) {
+    return function(number) {
+        return number * factor;
+    };
+}
+
+const double = multiplierFactory(2);
+
+console.log(double(10));
+                </code></pre></div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
