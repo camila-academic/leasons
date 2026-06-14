@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="header">
+        <h1>Tutorial interativo de JavaScript</h1>
+        <h2>execute e edite cada exemplo do documento diretamente no browser</h2>
+    </div>
+
+    <div style="padding:1rem 0 0">
+
+        <div class="card">
+            <div class="section-label">
+                Mostrando Informação: o console do navegador
+            </div>
+    
+            <script type="text/plain" id="src-info-0">
+// Neste ambiente controlado, o console do navegador será substituido pela caixa de texto
+// logo abaixo do botão executar.
+
+console.log("--- logs padrão: normal, aviso e erro ---");
+
+console.log("Hello, World!");
+console.warn("Isso é um aviso!");
+console.error("Isso é um erro!");
+
+console.log("\n--- Template literal ---");
+
+let valor = "JavaScript";
+
+// A maneira comim de se concatenar texto en javascripo é usando o operador +
+// da segunte forma:
+console.log("O valor é: " + valor);
+
+// A linguagem também permite o Template Literal, uma literal de string que
+// aceita e automaticamente concatena expressões envolvas por '${...}'
+console.log(`Template literal: ${valor.toUpperCase()}`);
+
+// Clicque no botão [Executar] para ver o código rodando em tempo real!
+            </script>
+            <div class="editor" data-source="src-info-0" id="editor-info-0"></div>
+        
+            <button class="run-btn" onclick="runCode('editor-info-0','out-info-0')">
+                <i class="ti ti-player-play" aria-hidden="true"></i> Executar
+            </button>
+
+            <div class="output" id="out-info-0"></div>
+        </div>
+
+        <div class="card">
+            <div class="section-label">
+                Variáveis: var, let, const
+            </div>
+
+            <script type="text/plain" id="src-vars-0">
+console.log("--- var ---")
+// tem hoisting (declaração é içada pro topo)
+
+try {
+    console.log("var antes da declaração:", myVar);
+}
+catch(e) {
+    console.error(e.message);
+}
+
+var myVar = "Hello, var!";
+console.log("myVar:", myVar);
+myVar = "Goodbye, var!";
+console.log("myVar mutado:", myVar);
+
+console.log("\n--- let ---")
+// sem hoisting
+
+try {
+    console.log(myLet);
+}
+catch(e) {
+    console.error("let sem hoisting:", e.message);
+}
+
+let myLet = "Hello, let!";
+myLet = "Goodbye, let!";
+console.log("myLet:", myLet);
+
+console.log("\n--- const ---")
+// Referência imutável
+
+const myConst = "Hello, const!";
+console.log("myConst:", myConst);
+
+try {
+    myConst = "Goodbye?";
+}
+catch(e) {
+    console.error("const:", e.message);
+}
+
+console.log("\n--- const com objeto ---")
+// Propriedades PODEM mudar
+
+const pessoa = { nome: "Ana" };
+pessoa.nome = "Beatriz";
+console.log("pessoa.nome:", pessoa.nome);
+            </script>
+            <div class="editor" data-source="src-vars-0" id="editor-vars-0"></div>
+
+
+            <button class="run-btn" onclick="runCode('editor-vars-0','out-vars-0')">
+                <i class="ti ti-player-play" aria-hidden="true"></i> Executar
+            </button>
+
+            <div class="output" id="out-vars-0"></div>
+        </div>
+
+        <div class="card">
+            <div class="section-label">
+               Tipos primitivos: typeof e coerção
+            </div>
+
+            <script type="text/plain" id="src-types-0">
+let texto      = "Olá";
+let numero     = 42;
+let decimal    = 3.14;
+let booleano   = true;
+let nulo       = null;
+let indefinido = undefined;
+let simbolo    = Symbol("id");
+
+console.log("typeof 'Olá'      =", typeof texto);
+console.log("typeof 42         =", typeof numero);
+console.log("typeof 3.14       =", typeof decimal);
+console.log("typeof true       =", typeof booleano);
+console.log("typeof null       =", typeof nulo, " <- bug histórico do JS!");
+console.log("typeof undefined  =", typeof indefinido);
+console.log("typeof Symbol()   =", typeof simbolo);
+
+console.log("\n--- Coerção de tipo ---");
+
+console.log('"5" + 3   =', "5" + 3,  "<- 3 vira string");
+console.log('"5" - 3   =', "5" - 3,  " <- \"5\" vira número");
+console.log("true  + 1 =", true + 1, " <- true vira 1");
+console.log("false + 1 =", false + 1," <- false vira 0");
+            </script>
+            <div class="editor" data-source="src-types-0" id="editor-types-0"></div>
+
+            <button class="run-btn" onclick="runCode('editor-types-0','out-types')">
+                <i class="ti ti-player-play" aria-hidden="true"></i> Executar
+            </button>
+
+            <div class="output" id="out-types"></div>
+
+        </div>
+
+        <div class="card">
+            <div class="section-label">
+                Operadores: igualdade, lógicos, null-coalescing.
+            </div>
+
+            <script type="text/plain" id="src-ops-0">
+// Aritméticos
+console.log("5 + 2  =", 5+2);
+console.log("5 / 2  =", 5/2, "<- em javascript, todo número é de ponto flutuante!");
+console.log("5 % 2  =", 5%2, "<- resto");
+console.log("5 ** 2 =", 5**2,"<- potência");
+
+// == vs ===
+console.log("---");
+console.log('5 == "5"  =', 5 == "5",  "← true, converte tipos");
+console.log('5 === "5" =', 5 === "5", "← false, tipos diferentes");
+console.log("0 == false =", 0 == false);
+console.log("0 === false=", 0 === false);
+
+// Nullish coalescing ?? e optional chaining ?.
+console.log("---");
+let nome = null;
+console.log("null ?? 'Anônimo' =", nome ?? "Anônimo");
+let usuario = null;
+console.log("null?.email       =", usuario?.email, "<- sem erro de acesso!");
+            </script>
+            <div class="editor" data-source="src-ops-0" id="editor-ops-0"></div>
+
+            <button class="run-btn" onclick="runCode('editor-ops-0','out-ops-0')">
+                <i class="ti ti-player-play" aria-hidden="true"></i> Executar
+            </button>
+
+            <div class="output" id="out-ops-0"></div>
+        </div>
+
+        <div class="card">
+            <div class="section-label">
+                Controle de fluxo: if, ternário, switch, loops
+            </div>
+            
+        
+            <script type="text/plain" id="src-flow-0">
+let nota = 75;
+
+// Cadeias de `if ... else`
+if (nota >= 90) {
+    console.log("Distinção!");
+}
+else if (nota >= 60) {
+    console.log("Aprovado!");
+}
+else {
+    console.log("Reprovado.");
+}
+
+// Ternário
+let resultado = nota >= 60 ? "Aprovado" : "Reprovado";
+console.log("Ternário:", resultado);
+
+// switch ... case
+let dia = new Date().getDay();
+
+switch(dia) {
+    case 1: console.log("Segunda"); break;
+    case 2: console.log("Terça");   break;
+    case 3: console.log("Quarta");  break;
+    case 3: console.log("Quinta");  break;
+    case 3: console.log("Sexta");   break;
+    default: console.log("Final de semana!");
+}
+
+let count = 0;
+while (count < 10) {
+    console.log("counting ", count++, "...");
+}
+
+// for, while
+for (let i = 0; i < 3; i++) console.log("for i =", i);
+
+// for ... of
+// Percorre os valores dentro de uma estrutura iterável
+let frutas = ["maçã", "banana", "laranja"];
+for (let f of frutas) console.log("for...of:", f);
+
+// for ... in
+// Percorre as chaves de um objeto
+let carro = { marca: "Toyota", modelo: "Corolla" };
+for (let k in carro) console.log("for...in:", k, "=", carro[k]);
+            </script>
+            <div class="editor" data-source="src-flow-0" id="editor-flow-0"></div>
+
+            <button class="run-btn" onclick="runCode('editor-flow-0','out-flow-0')">
+                <i class="ti ti-player-play" aria-hidden="true"></i> Executar
+            </button>
+
+            <div class="output" id="out-flow-0"></div>
+        </div>
+
+        <div class="card">
+            <div class="section-label">
+                Estruturas de dados: arrays, objects, métodos, desestruturação, spread
+            </div>
+            
+            <script type="text/plain" id="src-arrs-0">
+console.log("--- Arrays ---");
+
+let nums = [10, 20, 30, 40, 50];
+console.log("nums[0] =", nums[0]);
+console.log("largura da array:", nums.length);
+
+nums.push(60);           // push: incrementa um elemento no final da lista
+nums.unshift(0);         // unshift: incrementa um elemento no inicio da lista
+let ultimo = nums.pop(); // pop: remove e retorna o último (right-most) elemento da lista
+
+console.log("após as operações:", nums);
+
+let dobrados = nums.map(n => n * 2);
+let pares    = nums.filter(n => n % 2 === 0);
+let soma     = nums.reduce((acc, n) => acc + n, 0);
+
+console.log("dobro de todos:   ", dobrados);
+console.log("pares filtrados:  ", pares);
+console.log("soma de todos:    ", soma);
+
+console.log("\n--- Desestruturação ---");
+
+// nums é uma array. desestruturamos suas componentes em diferentes campos nomeados
+// primeiro = nums[0], segundo = nums[1], resto = nums[2..]
+let [primeiro, segundo, ...resto] = nums;
+console.log("primeiro:", primeiro);
+console.log("segundo: ", segundo);
+console.log("resto:   ", resto);
+
+console.log("\n--- Objeto ---");
+// Objetos funcionam de forma semelhante a estruturas em C.
+// Diferente de C, os objetos não tem uma definição clara,
+// sendo definidos quando criados.
+
+let pessoa = {
+    nome: "Carlos",
+    idade: 30,
+    saudar() { return `Olá, sou ${this.nome}!`; },
+};
+
+// Objetos também podem ser desestruturados!
+let { nome, idade } = pessoa;
+console.log(pessoa.saudar());
+console.log("desestruturado:", nome, idade);
+
+console.log("\n--- Spread ---");
+
+let extra = { profissao: "dev" };
+let completo = { ...pessoa, ...extra };
+console.log("spread:", JSON.stringify(completo));
+            </script>
+            <div class="editor" data-source="src-arrs-0" id="editor-arrs-0"></div>
+            
+            <button class="run-btn" onclick="runCode('editor-arrs-0','out-arrs-0')">
+                <i class="ti ti-player-play" aria-hidden="true"></i> Executar
+            </button>
+
+            <div class="output" id="out-arrs-0"></div>
+        </div>
+
+        <div class="card">
+            <div class="section-label">
+                Funções como primeira classe: declaração, arrow, closure
+            </div>
+
+            <script type="text/plain" id="src-fns-0">
+console.log("--- Declaração de uma função estática ---");
+// Funções declaradas possuem hoisting.
+// Isso significa que a definição da função é carregada
+// antes da execução do código, permitindo chamá-la
+// mesmo antes de sua declaração.
+
+console.log("somar(4, 8):", somar(4, 8));
+
+function somar(a, b) {
+    return a + b;
+}
+
+console.log("somar(2, 3):", somar(2, 3));
+
+
+console.log("\n--- Expressão de função anônima ---");
+// Expressão de função anônima
+// Aqui a função é armazenada dentro de uma variável.
+//
+// Tentar chamar a função antes da atribuição
+// gera um erro.
+
+// console.log("multiplicar(2, 2):", multiplicar(2, 2)); // Erro! `multiplicar` ainda não existe!
+const multiplicar = function(a, b) {
+    return a * b;
+};
+console.log("multiplicar(4, 5):", multiplicar(4, 5));
+
+
+console.log("\n--- Arrow Function ---");
+// Arrow Functions são uma sintaxe mais curta para criar funções anônimas.
+//
+// Elas são muito utilizadas em callbacks e operações
+// funcionais como map(), filter() e reduce().
+//
+// Quando possuem apenas uma expressão,
+// o retorno é implícito.
+
+const dividir = (a, b) => a / b;
+console.log("dividir(10,2):", dividir(10, 2));
+
+console.log("\n--- Parâmetros com valor padrão ---");
+// Parâmetros em funções podem ser definidos como opcionais
+// colocando um valor aṕos o caractere '='.
+// Caso um argumento não seja fornecido,
+// o JavaScript utiliza o valor definido após '='.
+
+function cumprimentar(nome, saudacao = "Olá") {
+    return `${saudacao}, ${nome}!`;
+}
+
+console.log(cumprimentar("Ana"));
+console.log(cumprimentar("Ana", "Oi"));
+
+
+console.log("\n--- Rest Parameter (...) ---");
+// O operador '...' reúne todos os argumentos restantes
+// em um único array.
+//
+// Isso permite criar funções que recebem uma quantidade
+// variável de parâmetros.
+
+function somarTudo(...numeros) {
+    return numeros.reduce((acc, n) => acc + n, 0);
+}
+
+console.log("somarTudo(1, 2, 3, 4):", somarTudo(1, 2, 3, 4));
+console.log("somarTudo(1, 2, 3, 4, 5, 6, 7, 8):", somarTudo(1, 2, 3, 4, 5, 6, 7, 8));
+
+
+console.log("\n--- Closure (fechamentos) ---");
+// Uma Closure ocorre quando uma função interna
+// continua tendo acesso às variáveis do escopo externo,
+// mesmo após a função externa terminar sua execução.
+//
+// Nesse exemplo, a variável 'contagem' fica privada
+// e só pode ser manipulada pelos métodos retornados.
+
+function criarContador() {
+
+    let contagem = 0;
+
+    return {
+        inc: () => ++contagem,
+        dec: () => --contagem,
+        val: () => contagem
+    };
+}
+
+let c = criarContador();
+
+c.inc();
+c.inc();
+c.inc();
+c.dec();
+
+console.log("closure contador:", c.val());
+            </script>
+            <div class="editor" data-source="src-fns-0" id="editor-fns-0"></div>
+            
+            <button class="run-btn" onclick="runCode('editor-fns-0','out-fns-0')">
+                <i class="ti ti-player-play" aria-hidden="true"></i> Executar
+            </button>
+
+            <div class="output" id="out-fns-0"></div>
+        </div>
+
+        <div class="card">
+            <div class="section-label">
+                javascript asíncrono: setTimeout, Promise, async/await
+            </div>
+
+            <script type="text/plain" id="src-asy-0">
+console.log("--- setTimeout ---");
+// Inicia um timer e continua a execução. quando o timer acabar,
+// vai executar o código independente do que estiver sendo executado
+// no momento
+
+setTimeout(() => console.log("3. executa após 200ms"), 200);
+console.log("1. executa agora");
+console.log("2. executa agora também");
+
+console.log("\n--- Promise ---");
+
+function buscarUsuario(id) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (id > 0) resolve({ id, nome: "Ana" });
+            else reject(new Error("ID inválido"));
+        }, 100);
+    });
+}
+
+buscarUsuario(1)
+    .then(u => console.log("4. Promise resolvida:", u.nome))
+    .catch(e => console.error("Erro:", e.message));
+
+buscarUsuario(-1)
+    .then(u => console.log("nunca chega aqui"))
+    .catch(e => console.error("5. Promise rejeitada:", e.message));
+
+console.log("\n--- async/await ---");
+
+async function mostrar() {
+    try {
+        let u = await buscarUsuario(1);
+        console.log("6. async/await:", u.nome);
+    } catch(e) {
+        console.error(e.message);
+    }
+}
+
+mostrar();
+            </script>
+            <div class="editor" data-source="src-asy-0" id="editor-asy-0"></div>
+
+            <button class="run-btn" onclick="runCode('editor-asy-0','out-asy-0')">
+                <i class="ti ti-player-play" aria-hidden="true"></i> Executar
+            </button>
+            
+            <p class="hint">As mensagens assíncronas aparecem em ordem — observe a sequência numerada.</p>
+            <div class="output" id="out-asy-0"></div>
+        </div>
+
+        <div class="card">
+            <div class="section-label">
+                try...catch: tratamento de erros
+            </div>
+            <script type="text/plain" id="src-trycatch-0">
+console.log("--- try ... catch ... finaly ---");
+
+// Os escopos try ... catch ... finaly são usados para detectar, suprimir e manipular erros.
+// Esse recurso permite executar código inseguro ou falível sem que todo o programa sofra com
+// a possibilidade de um erro inexperado.
+
+try {
+    // O escopo do bloco try define onde o erro ocorre.
+    // qualquer erro gerado dentro desse escopo é suprimido
+    // e lançado para o bloco catch, se ouver
+
+    console.log("Executando bloco try...");
+    throw new Error("algo deu errado!"); // A instrução `throw` lança um objeto como um erro
+    console.log("isso nunca executa");
+}
+catch (e) {
+    // O bloco catch só é executado em caso de erro,
+    // recebendo como parâmetro o objeto do erro capturado
+    // pelo escopo try.
+
+    console.error("catch capturou:", e.message);
+    console.error("e.name:", e.name);
+}
+finally {
+    // O bloco finally sempre executa, em caso de erro ou não.
+    // Ele também executa caso ocorra um retorno dentro de try ou catch.
+    
+    // O finally tem uma função demelhante ao `defer` das linguagens modernas
+
+    console.log("finally: sempre executa!");
+}
+
+console.log("\n--- Erro de tipo ---");
+
+try {
+    // Aqui, tentamos acessar o campo `propriedade` dentro do objeto null.
+    null.propriedade;
+}
+catch(e) {
+    console.error(e.name + ":", e.message);
+    console.error("o objeto 'null' não possui propiedades,\nlogo é impossível acessar algo nele!");
+}
+
+console.log("\n--- Finally sempre executa ---");
+try {
+    console.log("try sem erro");
+}
+catch(e) { console.log("não executa"); }
+finally  { console.log("finally de novo"); }
+
+
+console.log("\n---  ---");
+// Questão pegadinha famosa! qual valor a função a seguir retorna?
+function trick() {
+    try {
+        return "try";
+    }
+    finally {
+        return "finally";
+    }
+}
+
+// descomente para ver a resposta
+//console.log(trick());
+            </script>
+            <div class="editor" data-source="src-trycatch-0" id="editor-trycatch-0"></div>
+
+            <button class="run-btn" onclick="runCode('editor-trycatch-0','out-trycatch-0')">
+                <i class="ti ti-player-play" aria-hidden="true"></i> Executar
+            </button>
+            <div class="output" id="out-trycatch-0"></div>
+        </div>
+
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.52.2/min/vs/loader.min.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+</html>
