@@ -24,14 +24,14 @@ $$ \int a^x \,dx = \frac{a}{\ln(a)} + C $$
 Trigonometric rules:
 
 $$
-\begin{align*}
+\begin{aligned}
     \int \sin x \,dx &= -\cos x + C \\
     \int \cos x \,dx &= \sin x + C \\
-    \int \sec^2 x \,dx &= tan\,x + C \\
-    \int \csc^2 x \,dx &= -ctan\,x + C \\
-    \int \sec x \cdot tan\,x \,dx &= \sec x + C \\
-    \int ctan\,x \cdot ctan\,x \,dx &= -\csc x + C \\
-\end{align*}
+    \int \sec^2 x \,dx &= \tan x + C \\
+    \int \csc^2 x \,dx &= -\cot x + C \\
+    \int \sec x \cdot \tan x \,dx &= \sec x + C \\
+    \int \csc x \cdot \cot x \,dx &= -\csc x + C
+\end{aligned}
 $$
 
 ## Linearity Rules
