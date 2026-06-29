@@ -3,36 +3,23 @@
 ## Integration rules
 
 The inverse of the expoent derivation rule:
-$$
-\begin{align*}
-    \int x^n \,dx &= \frac{x^{n+1}}{n+1} + C \\
-    \int x \,dx &= \frac{x^{2}}{2} + C
-\end{align*}
-$$
+
+$$ \int x^n \,dx = \frac{x^{n+1}}{n+1} + C $$
+$$ \int x \,dx = \frac{x^{2}}{2} + C $$
+
 > Tip: Add 1 to the expoent and divide all by the result
 
 Logarithm rule:
-$$
-\begin{align*}
-    \int \frac{f^{\prime}(x)}{f(x)} \,dx &= \ln \lvert f(x) \rvert + C \\
-\end{align*}
-$$
+
+$$ \int \frac{f^{\prime}(x)}{f(x)} \,dx = \ln \lvert f(x) \rvert + C $$
 
 Natural expoent:
-$$
-\begin{align*}
-    \int e^x \,dx &= \ln e^x + C \\
-\end{align*}
-$$
+
+$$ \int e^x \,dx = \ln e^x + C $$
 
 Some other rules:
 
-$$
-\begin{align*}
-    \int a^x \,dx &= \frac{a}{\ln(a)} + C \\
-    
-\end{align*}
-$$
+$$ \int a^x \,dx = \frac{a}{\ln(a)} + C $$
 
 Trigonometric rules:
 
@@ -40,16 +27,17 @@ $$
 \begin{align*}
     \int \sin x \,dx &= -\cos x + C \\
     \int \cos x \,dx &= \sin x + C \\
-    \int \sec^2 x \,dx &= \tg x + C \\
-    \int \csc^2 x \,dx &= -\ctg x + C \\
-    \int \sec x \cdot \tg x \,dx &= \sec x + C \\
-    \int \ctg x \cdot \ctg x \,dx &= -\csc x + C \\
+    \int \sec^2 x \,dx &= tan\,x + C \\
+    \int \csc^2 x \,dx &= -ctan\,x + C \\
+    \int \sec x \cdot tan\,x \,dx &= \sec x + C \\
+    \int ctan\,x \cdot ctan\,x \,dx &= -\csc x + C \\
 \end{align*}
 $$
 
 ## Linearity Rules
 
 The integral of a sum is the sum of the integrals of its parts:
+
 $$
 \begin{align*}
     \int (f(x) + g(x))\,dx &= \int f(x)\,dx + \int g(x)\,dx \\
@@ -58,6 +46,7 @@ $$
 $$
 
 Any constant can be taken out of the integration:
+
 $$
 \begin{align*}
     \int c \cdot f(x)\,dx &= c \int f(x)\,dx \\
@@ -69,19 +58,19 @@ $$
 ## Integration By Substitution
 
 The substitution is used as the inverse of the chain derivation rule:
-$$
-\int g(f(x)) \cdot f\prime(x) \,dx \\
 
-\begin{align*}
-    \int (x^3 - 2x + 1)^2 (3x^2 - 2) \,dx &\qquad\, \frac{dy}{dx} (x³ - 2x + 1) = 3x² - 2 \\
-    \int \frac{2x}{x^2 + 1} \,dx &\qquad \frac{dy}{dx}\, x^2 + 1 = 2x \\
-\end{align*}
-$$
+$$ \int (f(x) + g(x))\,dx = \int f(x)\,dx + \int g(x)\,dx $$
+$$ \int (x + x^2)\,dx = \int x\,dx + \int x^2\,dx $$
+
+Any constant can be taken out of the integration:
+
+$$ \int c \cdot f(x)\,dx = c \int f(x)\,dx $$
+$$ \int 2x^2 \,dx = 2 \int x^2 \,dx $$
+$$ \int \frac{x}{5} \,dx = \frac{1}{5} \int x \,dx $$
 
 Solving the following:
-$$
-\int \frac{2x}{x^2 + 1} \,dx
-$$
+
+$$ \int \frac{2x}{x^2 + 1} \,dx $$
 
 First, we choose an inner function and set it equal to $u$.
 
@@ -91,7 +80,7 @@ u = x^2 + 1
 \end{align}
 $$
 
-- Next, we differentiate $u$ with respect to $x$ to find $du$.
+Next, we differentiate $u$ with respect to $x$ to find $du$.
 
 $$
 \begin{align}
@@ -117,7 +106,8 @@ $$
 
 ## Simplified Rules
 
-Based on $ \int \frac{f^{\prime}(x)}{f(x)} \,dx = \ln \lvert f(x) \rvert + C $:
+Based on $\int \frac{f^{\prime}(x)}{f(x)} \,dx = \ln \\lvert f(x) \\rvert + C$:
+
 
 $$
 \int \frac{dx}{x} = \ln \lvert x \rvert + C \\
@@ -129,7 +119,7 @@ $$
 
 $$
 \begin{align*}
-\int \tg(x) \,dx
+\int \tan(x) \,dx
     &= \int \frac{\sin(x)}{\cos(x)} \,dx \\
     &= -\ln \lvert \cos(x) \rvert + C \\
     &= \ln \lvert \sec(x) \rvert + C \\
@@ -138,7 +128,7 @@ $$
 
 $$
 \begin{align*}
-\int \ctg(x) \,dx
+\int ctan(x) \,dx
     &= \int \frac{\cos(x)}{\sin(x)} \,dx \\
     &= \ln|\sec(x)+\tan(x)| + C
 \end{align*}
