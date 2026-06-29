@@ -2,7 +2,7 @@
 
 ## Integration rules
 
-The inverse of the expoent derivation rule:
+The inverse of the expoent differentiation rule:
 
 $$ \int x^n \\,dx = \frac{x^{n+1}}{n+1} + C $$
 $$ \int x \\,dx = \frac{x^{2}}{2} + C $$
@@ -11,7 +11,7 @@ $$ \int x \\,dx = \frac{x^{2}}{2} + C $$
 
 Logarithm rule:
 
-$$ \int \frac{f^{\prime}(x)}{f(x)} \\,dx = \ln \lvert f(x) \rvert + C $$
+$$ \int \frac{f'(x)}{f(x)} \\,dx = \ln \lvert f(x) \rvert + C $$
 
 Natural expoent:
 
@@ -106,7 +106,7 @@ $$
 
 ## Simplified Rules
 
-Based on $\int \frac{f^{\prime}(x)}{f(x)} \\,dx = \ln \\lvert f(x) \\rvert + C$:
+Based on $\int \frac{f'(x)}{f(x)} \\,dx = \ln \\lvert f(x) \\rvert + C$:
 
 
 $$
